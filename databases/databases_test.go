@@ -13,8 +13,7 @@ import (
 type Config struct {
 	clear bool
 
-	buntPath string
-
+	buntPath        string
 	postgresConnect string
 }
 
@@ -30,8 +29,6 @@ func init() {
 	})
 	fmt.Println()
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var (
 	buntDB *bunt.DB
@@ -99,8 +96,6 @@ func BenchmarkBuntReadParallel(b *testing.B) {
 		}
 	})
 }
-
-////////////////////////////////////////////////////////////////////////////////////////////////////
 
 var (
 	pgDB *sql.DB
